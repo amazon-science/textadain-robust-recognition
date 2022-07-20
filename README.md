@@ -34,6 +34,95 @@ As there are weights to this module, after training with this, the model can be 
     out = self.bn(out)
 ```
 
+
+## Results
+Below are the results for a variety of settings - scene text and handwriting and multiple architectures, with and without TextAdaIN.
+Applying TextAdaIN in state-of-the-art recognizers increases performance. 
+
+<div class="tg-wrap" align="center"><table>
+<thead>
+  <tr>
+    <th rowspan="3">Method</th>
+    <th colspan="2">Scene Text</th>
+    <th colspan="2">Handwritten</th>
+  </tr>
+  <tr>
+    <th>Regular</th>
+    <th>Irregular</th>
+    <th>IAM</th>
+    <th>RIMES</th>
+  </tr>
+  <tr>
+    <th>5,529</th>
+    <th>3,010</th>
+    <th>17,990</th>
+    <th>7,734</th>
+  </tr>
+
+
+
+
+</thead>
+<tbody>
+  <tr>
+    <td><a href="https://github.com/clovaai/deep-text-recognition-benchmark" > Baek et al.</a> (CTC)</td>
+    <td>88.7<br></td>
+    <td>72.9</td>
+    <td>80.6</td>
+    <td>87.8</td>
+  </tr>
+  <tr>
+    <td>+ TextAdaIN</td>
+    <td>89.5 (+0.8)</td>
+    <td>73.8 (+0.9)</td>
+    <td>81.5 (+0.9)</td>
+    <td>90.7 (+2.9)</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/clovaai/deep-text-recognition-benchmark" > Baek et al.</a> (Attn)</td>
+    <td>92.0</td>
+    <td>77.4</td>
+    <td>82.7</td>
+    <td>90.2</td>
+  </tr>
+  <tr>
+    <td>+ TextAdaIN</td>
+    <td>92.2 (+0.2)</td>
+    <td>77.7 (+0.3)</td>
+    <td>84.1 (+1.4)</td>
+    <td>93.0 (+2.8)</td>
+  </tr>
+  <tr>
+    <td><a href="https://arxiv.org/abs/2003.11288" > Litman et al.</a></td>
+    <td>93.6</td>
+    <td>83.0</td>
+    <td>85.7</td>
+    <td>93.3</td>
+  </tr>
+  <tr>
+    <td>+ TextAdaIN</td>
+    <td>94.2 (+0.6)</td>
+    <td>83.4 (+0.4)</td>
+    <td>87.3 (+1.6)</td>
+    <td>94.4 (+1.1)</td>
+  </tr>
+  <tr>
+    <td><a href="https://github.com/FangShancheng/ABINet" > Fang et al.</a></td>
+    <td>93.9</td>
+    <td>82.0</td>
+    <td>85.4</td>
+    <td>92.0</td>
+  </tr>
+  <tr>
+    <td>+ TextAdaIN</td>
+    <td>94.2 (+0.3)</td>
+    <td>82.8 (+0.8)</td>
+    <td>86.3 (+0.9)</td>
+    <td>93.0 (+1.0)</td>
+  </tr>
+</tbody>
+</table></div>
+
 ## Experiments - Plug n' play
 
 ### Standard Text Recognizer
