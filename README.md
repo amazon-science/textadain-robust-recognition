@@ -1,6 +1,9 @@
 ## TextAdaIN: Paying Attention to Shortcut Learning in Text Recognizers
-This is the official pytorch implementation of [TextAdaIN](https://arxiv.org/abs/2105.03906) (ECCV 2022)
+This is the official pytorch implementation of [TextAdaIN](https://arxiv.org/abs/2105.03906) (ECCV 2022).
 
+**[Oren Nuriel](https://scholar.google.com/citations?hl=en&user=x3j-9RwAAAAJ),
+[Sharon Fogel](https://scholar.google.com/citations?hl=en&user=fJHpwNkAAAAJ),
+[Ron Litman](https://scholar.google.com/citations?hl=en&user=69GY5dEAAAAJ)**
 
 TextAdaIN creates local distortions in the feature map which prevent the network from overfitting to local statistics.  It does so by viewing each feature map as a sequence of elements and deliberately mismatching fine-grained feature statistics between elements in a mini-batch.
 
@@ -144,7 +147,7 @@ After this is done, simply run the command line as instructed in the [training s
 
 Please refer to the implementation details in the paper for further information.
 
-## Credit
+## Citation
 If you find this work useful please consider citing it:
 ```
 @article{nuriel2021textadain,
